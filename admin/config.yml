@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "menu"
+    label: "Menu"
+    folder: "content/menu"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Categorie", name: "category", widget: "select", options: ["Voorgerechten", "Salades", "Hoofdgerechten", "Kinderen", "Desserts"]}
+      - {label: "Naam", name: "title", widget: "string"}
+      - {label: "Beschrijving", name: "description", widget: "text", required: false}
+      - {label: "Prijs", name: "price", widget: "string"}
+      - {label: "Actief", name: "active", widget: "boolean", default: true}
+
+  - name: "promotions"
+    label: "Aanbiedingen"
+    folder: "content/promotions"
+    create: true
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Prijs", name: "price", widget: "string"}
+      - {label: "Beschrijving", name: "description", widget: "text"}
+      - {label: "Actief", name: "active", widget: "boolean", default: true}
+
+  - name: "settings"
+    label: "Site Instellingen"
+    files:
+      - file: "content/settings.json"
+        label: "Algemene Instellingen"
+        fields:
+          - {label: "Restaurant Naam", name: "name", widget: "string"}
+          - {label: "Adres", name: "address", widget: "string"}
+          - {label: "WhatsApp Nummer", name: "whatsapp", widget: "string"}
+          - {label: "Openingstijden", name: "hours", widget: "text"}
