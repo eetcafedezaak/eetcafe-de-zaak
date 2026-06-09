@@ -1,6 +1,0 @@
-# EERST: redirect netlify subdomain naar jouw domein (zonder https force)
-https://*.netlify.app/* https://www.eetcafedezaak.com/:splat 301!
-http://*.netlify.app/* https://www.eetcafedezaak.com/:splat 301!
-
-# Redirect non-www naar www (alleen https, want http wordt al door Netlify zelf afgehandeld)
-https://eetcafedezaak.com/* https://www.eetcafedezaak.com/:splat 301!
