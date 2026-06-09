@@ -1,0 +1,8 @@
+# Redirect alle versies naar https://www.eetcafedezaak.com
+http://www.eetcafedezaak.com/* https://www.eetcafedezaak.com/:splat 301!
+http://eetcafedezaak.com/* https://www.eetcafedezaak.com/:splat 301!
+https://eetcafedezaak.com/* https://www.eetcafedezaak.com/:splat 301!
+
+# Redirect netlify subdomain naar jouw domein
+https://*.netlify.app/* https://www.eetcafedezaak.com/:splat 301!
+http://*.netlify.app/* https://www.eetcafedezaak.com/:splat 301!
